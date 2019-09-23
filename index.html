@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  冯姐文档分享 - Notes Sharing Site
+  Notes Sharing Site
   
   </title>
+  
   
   
   <link href="atom.xml" rel="alternate" title="Notes Sharing Site" type="application/atom+xml">
@@ -25,13 +26,6 @@
     return true;
   }
 </script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-3417446866952160",
-    enable_page_level_ads: true
-  });
-</script>
   </head>
   <body class="antialiased hide-extras">
     
@@ -47,15 +41,17 @@
       <div style="position: relative;width:100%;"><div style="position: absolute; width:100%;">
         <ul id="main-menu" class="left">
         
-        <li id=""><a target="_self" href="index.html">Cover</a></li>
+        <li id=""><a target="_self" href="index.html">Home</a></li>
         
-        <li id=""><a target="_self" href="archives.html">Notes</a></li>
+        <li id=""><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li id=""><a target="_self" href="about.html">About</a></li>
         
         </ul>
 
         <ul class="right" id="search-wrap">
           <li>
-<form target="_blank" onsubmit="return before_search();" action="http://google.com/search" method="get">
+<form target="_blank" onsubmit="return before_search();" action="https://google.com/search" method="get">
     <input type="hidden" id="search_q" name="q" value="" />
     <input tabindex="1" type="search" id="search_input"  placeholder="Search"/>
 </form>
@@ -76,13 +72,19 @@
 <aside class="left-off-canvas-menu">
       <ul class="off-canvas-list">
         
-        <li><a target="_self" href="index.html">Cover</a></li>
+        <li><a target="_self" href="index.html">Home</a></li>
         
-        <li><a target="_self" href="archives.html">Notes</a></li>
+        <li><a target="_self" href="archives.html">Archives</a></li>
+        
+        <li><a target="_self" href="about.html">About</a></li>
         
 
     <li><label>Categories</label></li>
 
+        
+            <li><a href="%E8%AE%BA%E6%96%87%E4%B8%8E%E5%AD%A6%E6%9C%AF.html">论文与学术</a></li>
+        
+            <li><a href="%E6%90%AD%E5%BB%BA%E8%BF%99%E9%87%8C.html">搭建这里</a></li>
          
 
       </ul>
@@ -97,28 +99,582 @@
 
  <script type="text/javascript">
 	$(function(){
-		var currentURL = 'index.html';
-		currentURL = currentURL.substr(0,currentURL.length-5);
-		$('#menu_item_'+currentURL).addClass('is_active');
+		$('#menu_item_index').addClass('is_active');
 	});
 </script>
 <div class="row">
+	<div class="large-8 medium-8 columns">
+		<div class="markdown-body home-categories">
+		
+			<div class="article">
+                <a class="clearlink" href="Use_MWeb.html">
+                
+                  <h1>以MWeb发布Github pages心得</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">前言</h2>
 
-    <div id="single-page-wrap">
-        <h1>冯姐文档分享</h1>
+<p>去年我热衷搞虚拟服务器，开设了我的github pages博客，还买了一个域名。但随着热情减退，博客没更新，域名也没续费。最近又想重新开博，发现博客打不开了。<br/>
+对于我而言，github pages设立博客就是一门玄学，永远摸不清其中奥秘。往往跟着网上教程操作一次很正常，改了一些看似无关紧要的参数就马上出现bug。这次也不例外，我想将之前买的域名解绑，重新用回github.io的原始域名，就怎么都打不开。</p>
 
-        <div class="markdown-body post-page">
-        <p><center><br/>
-欢迎来到冯姐文档分享站；<br/>
-这里主要分享各位大姐的学术经验；<br/>
-点击上方浏览更多文章。<br/>
-<img src="https://i.imgur.com/FQLoIzG.jpg" width="200"></p>
+<h2 id="toc_1">教程</h2>
 
-<p></center></p>
+<p>一年前的工作流程我已经完全忘记，只好重新找教程。<br/>
+经过试验，还是官方版本的两个文档比较有效：</p>
 
-        </div>
-    </div>
-</div>              
+<blockquote>
+<ol>
+<li><a href="https://zh.mweb.im/sync-webistes-to-github-or-ftp-zh.html">把生成的静态网站发布到github或FTP - MWeb</a></li>
+<li><a href="https://zh.mweb.im/how_to_use_shell_script.html">如何使用“发布脚本”功能发布静态网站 - MWeb</a></li>
+</ol>
+</blockquote>
+
+<p>也就是说，以MWeb是不能自动发布Github Pages的，需要每次“复制脚本命令并打开终端”。<br/>
+在编写本文时，因为格式原因曾希望修改已发布的博客版本，后未果。<br/>
+只好将整个博客删除重新布置。<br/>
+最简便的发步方法还是通过github desktop发布，后期修改都比较容易。教程如下：</p>
+
+<blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/57624916">MWeb + Github pages 搭建个人博客/静态网站 - 知乎</a></p>
+</blockquote>
+
+<p>与上面的教程不同，我直接将生成的静态网站保存在github本地文档中。</p>
+
+<h2 id="toc_2">后记</h2>
+
+<p>本博客仍比较简陋，很多技巧都未归纳收录。<br/>
+其实当时设置博客时候如何布置博客模板和其他细节我都不记得了，之后再整理补充。</p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2019/9/23</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E6%90%AD%E5%BB%BA%E8%BF%99%E9%87%8C.html'>搭建这里</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="SSCI_Download_tips.html">
+                
+                  <h1>冯姐SSCI论文查找经验</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<h2 id="toc_0">SSCI论文在哪里找？</h2>
+
+<p>SSCI（Social science citation index，译作社会科学引文索引）为美国科学情报研究所（Institute for Scientific Information，简称ISI）建立的综合性社科文献资料库，涉及经济、法律、管理、心理学、区域研究、社会学、资讯科学等。收录 50 个语种的 1700多种重要的国际性期刊，累计约 350 万条记录。 </p>
+
+<p>ISI web of knowledge是Thomson Scientific网络平台（收费）。通过&quot;<a href="http://apps.webofknowledge.com">http://apps.webofknowledge.com</a>&quot; 登录进入，或通过学校图书馆（如:<a href="https://login.libezproxy.must.edu.mo/login?url=http://apps.webofknowledge.com/">https://login.libezproxy.must.edu.mo/login?url=http://apps.webofknowledge.com/</a>) 或机构网站提供的入口进入。</p>
+
+<p>该产品是汤森路透公司的online学术服务产品，它包含了子产品 “web of science”数据库以及其他资源。Web of science数据库就是我们平时检索SSCI数据时所使用的网页。 </p>
+
+<h2 id="toc_1">SSCI在哪里下？</h2>
+
+<p>通过在SSCI查到文章的DOI号， </p>
+
+<p><img src="media/15179163486900/IMG_8355.jpg" alt="IMG_8355"/> </p>
+
+<p>然后打开一个<a href="http://sci-hub.tw/">神奇的、经常会消失的网站</a>，<br/>
+粘贴在搜索框里。</p>
+
+<p><img src="media/15179163486900/IMG_8356.jpg" alt="IMG_8356"/> </p>
+
+<h2 id="toc_2">网站不见怎么办？</h2>
+
+<p>因为这个网站经常会消失，<br/>
+所以可以通过一个<a href="https://aa.waguge.com/"><strong>浏览器提示不安全</strong>的网站</a>来查找它最新的地址。</p>
+
+<p><img src="media/15179163486900/IMG_8357.jpg" alt="IMG_8357"/></p>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/2/6</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E8%AE%BA%E6%96%87%E4%B8%8E%E5%AD%A6%E6%9C%AF.html'>论文与学术</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+			<div class="article">
+                <a class="clearlink" href="Miss_Ren_Amos.html">
+                
+                  <h1>任姐Amos处理法</h1>
+                  <div class="a-content">
+                      
+                      <div class="a-content-text">
+                        
+                        	<p>文章目录：</p>
+
+<ul>
+<li>
+<a href="#toc_0">一、项目打包 <br> Item Parceling</a>
+<ul>
+<li>
+<a href="#toc_1">-1. 数据录入</a>
+</li>
+<li>
+<a href="#toc_2">0. 为什么要打包？</a>
+</li>
+<li>
+<a href="#toc_3">1. Dimension(维度/尺度)</a>
+</li>
+<li>
+<a href="#toc_4">2. 分析(A) → 维度缩减(D) → 因素(F)</a>
+</li>
+<li>
+<a href="#toc_5">3. 转换(T) → 计算变量(C)</a>
+</li>
+<li>
+<a href="#toc_6">4. 另存新檔</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_7">二、Amos绘图</a>
+<ul>
+<li>
+<a href="#toc_8">1. 绘图</a>
+</li>
+<li>
+<a href="#toc_9">2. 记录数据</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_10">三、验证性因子分析与模型判别的原则</a>
+<ul>
+<li>
+<a href="#toc_11">验证性因子分析（CFA）</a>
+</li>
+<li>
+<a href="#toc_12">依据三原则找出最佳Model</a>
+</li>
+<li>
+<a href="#toc_13">三原则与模型判别</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_14">Q&amp;A</a>
+</li>
+<li>
+<a href="#toc_15">参考</a>
+</li>
+</ul>
+
+
+<h2 id="toc_0">一、项目打包 <br> Item Parceling</h2>
+
+<p><em>这部分在SPSS软件完成</em></p>
+
+<h3 id="toc_1">-1. 数据录入</h3>
+
+<p><em>问卷数据收集好后，需要先转换成SPSS格式，具体操作如下：</em><br/>
+打开SPSS软件，左下角会有两个页面，我们先点开“变量示图”页，然后“度量”项这里，我们选的是“度量”‌‌；“名称”这边就是每一个问卷的item（每个item对应一道问卷题目的代号），‌‌讲究的那可以在标签上写着上英文备注‌‌，其他参数一般默认。<br/>
+回到数据页面，把收集好的直接从Excel里面复制粘贴过来，这就是我们的原始数据‌。</p>
+
+<h3 id="toc_2">0. 为什么要打包？</h3>
+
+<p>在结构方程模型里，一般每个变量我们用3到4个item比较好一些‌‌</p>
+
+<p><img src="https://github.com/vcve/Manag-Sci./raw/master/Miss_Ren_Amos/15179000053747.jpg" width="500"></p>
+
+<p>例子里create这个变量就有13道题，这个就是题目就比较多，我们不可能把13个因子都写进去。<br/>
+那么我们首先要进行项目打包‌‌。‌‌</p>
+
+<p><img src="https://image.slidesharecdn.com/semmythandurbanlegend-130701025834-phpapp02/95/sem201307-28-638.jpg?cb=1422652659" width="500"></p>
+
+<h3 id="toc_3">1. Dimension(维度/尺度)</h3>
+
+<ol>
+<li>有Dimension：如12items有4个dimensions，则每个dimension包含3个items</li>
+<li>无Dimension：依据数据大小顺序排列，最小与最大相、次小与次大相加……计算出各项的平均值（若为奇数items，排除最中间项）</li>
+</ol>
+
+<h3 id="toc_4">2. 分析(A) → 维度缩减(D) → 因素(F)</h3>
+
+<blockquote>
+<p>任姐：“一共有13道题，‌‌在选项里面。‌‌按大小排序，‌‌继续，‌‌确定，‌‌就得到了，按大小排序，‌‌从大到小的一个排序结果。”</p>
+</blockquote>
+
+<p>那么我们怎么选择哪几个题目放‌‌在一起呢？‌‌</p>
+
+<ol>
+<li>将需要缩减维度的变量全选入「变量(V)」内</li>
+<li>选项(O)功能下勾选「依据因素负荷排序(S)」</li>
+<li>根据输出资料的「Communalities」排序</li>
+<li>变项若为奇数，将中间项删除，变项若为偶数，直接分组，以3~4组为原则（本题共有13个变项，删除第7个）</li>
+<li><p>定义新变项（NCRE1, NCRE2, NCRE3）</p>
+
+<p><strong>第一次选择</strong>：第一个值是最大和最小值相加，选码就是create 2+7；‌第二个就是create 5+6（‌次大和次小）；‌‌第三个就是，‌‌倒数第三大的create 3+1。同样的，<br/>
+<strong>第二次选择</strong>：12+13，10+11，10+8。</p></li>
+</ol>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center"></th>
+<th style="text-align: center">第一次选</th>
+<th style="text-align: center">第二次选</th>
+<th style="text-align: center">结果</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td style="text-align: center">分组1 (NCRE1)</td>
+<td style="text-align: center">1+2</td>
+<td style="text-align: center">12+13</td>
+<td style="text-align: center">1+2+12+13</td>
+</tr>
+<tr>
+<td style="text-align: center">分组2 (NCRE2)</td>
+<td style="text-align: center">3+4</td>
+<td style="text-align: center">11+‌4</td>
+<td style="text-align: center">3+4+10+11</td>
+</tr>
+<tr>
+<td style="text-align: center">分组3 (NCRE3)</td>
+<td style="text-align: center">5+6</td>
+<td style="text-align: center">10+8</td>
+<td style="text-align: center">5+6+10+8</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>任姐：“我们最后选选完以后，我们是不是多余了一项“‌‌9”？我们可以直接把它给扔掉了。也就是说，如果题目数量为奇数的话，中间这一项我们可以直接把它给扔掉不要。”</p>
+
+<p>“将第一次选的create 2+7和第二次选的12+13，这四个因子的相加再除以4，‌‌然后就得到了平均的4项。”</p>
+</blockquote>
+
+<h3 id="toc_5">3. 转换(T) → 计算变量(C)</h3>
+
+<blockquote>
+<p>转换，‌‌计算变量‌‌(create 2+7+12+13)/4</p>
+</blockquote>
+
+<ol>
+<li>目标变量(T)填入新的变项名称（NCRE1）</li>
+<li>数值表示式(E)填入维度缩减之选取结果之「平均值」</li>
+<li>分别将新的变项计算出来</li>
+</ol>
+
+<h3 id="toc_6">4. 另存新檔</h3>
+
+<p>项目打包完以后，其他的变量大概都是‌‌3到4个题目，所以问题相比较少，我们就不需要进行项目打包了。<br/>
+因为这里只有create变量问题相比较多，我们才进行项目打包，‌‌然后打包完以后，‌‌我们就开始，‌‌进行结构方程模型。</p>
+
+<h2 id="toc_7">二、Amos绘图</h2>
+
+<p><em>接下来进入AMOS软件</em><br/>
+<br><img src="https://github.com/vcve/Manag-Sci./raw/master/Miss_Ren_Amos/IMG_8348.jpg" width="500"><br></p>
+
+<h3 id="toc_8">1. 绘图</h3>
+
+<p>‌‌依图所示，在这里共4个变量，就是这个这两个是前导变量，中介变量，结果变量。</p>
+
+<ol>
+<li>先点中这个第一个，‌‌任意一个拖一个圆，在这个圆上面，根据题项数量按出旁边方框数量。‌‌</li>
+<li>Amos中圆形的东西是概念，‌‌没有办法观察，只能在方框里放我们那几个item。</li>
+<li>可以用旋转按钮将模型修正方向。</li>
+<li>为了美观，‌‌可以把整个变量用全选按钮全选中以后，复制原样的复制出其他几个变量，大小统一。</li>
+<li>然后画完以后，‌‌我们‌‌先把用线把连接起来
+
+<ol>
+<li>首先是自变量到中介变量，用箭头按钮从自变量往中介变量画出一条线；</li>
+<li>‌‌然后再画中介到因变量的箭头线。</li>
+<li>还有需要注意的是，凡是自变量之间需要一个双向箭头，因为它们相互影响。<br> <img src="https://github.com/vcve/Manag-Sci./raw/master/Miss_Ren_Amos/IMG_8349.jpg" width="500"></li>
+</ol></li>
+<li>最后我们还需要画误差，加到中介变量与结果变量的圆框上。双击这个大圆圈，然后就把这个变量的名字打上去，打完一个之后直接双击另一个变量的圆圈输入下一个变量名。<br>Model 1（SE+IM-SEXP-NCRE）：删除两两相连之线条，仅保留SE和IM之相联；<br>单向箭头由SE指向SEXP、由IM指向SEXP、由SEXP指向NCRE。<br>选择 ，凡是<img src="https://github.com/vcve/Manag-Sci./raw/master/Miss_Ren_Amos/15179032852673.jpg" alt=""/>「被单向箭头指入」的大圆，皆加入一个圆，并赋予新加入之圆 Object properties；<br><img src="https://github.com/vcve/Manag-Sci./raw/master/Miss_Ren_Amos/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202018-02-06%2016.33.01.png" width="500"></li>
+<li>点顶部菜单栏一个倒数第二个“Plugin”，就会把这些‌‌误差项的小圆圈自动命名。</li>
+<li>接下来导入数据，data载入数据，如果加入成功，这边显示n‌‌一共有233个数据，如果不成功就显示不出来，还可以用view来检测数据‌‌数据，然后点ok。‌‌‌‌我们在‌‌第三列，第三个，‌‌然后需要把这些变量赋进去，‌‌直接拖进去，让他直就直自动的赋值去了。</li>
+<li>然后点‌‌分析，一般来说我们要设置看哪些东西‌（任姐：“我一般其实点的比较多，‌‌但还是看你具体情况而定”）。</li>
+<li>分析完以后，计算之前肯定要先保存数据，‌再按旁边这个“‌‌计算”，然后就开始跑了，右下方有显示过程的黄色小框，表示他处在跑数据的过程。</li>
+<li>你刚跑完以后可以看，我们首先是看df、X<sup>2</sup>，df=61，然后还有RMSEA在这里。‌‌</li>
+</ol>
+
+<p><strong>总结：</strong></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>步骤</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><img src="https://github.com/vcve/Manag-Sci./raw/master/Miss_Ren_Amos/pastedGraphic.png" alt=""/></td>
+<td>1. 选取SPSS数据数据<br>2. 作业区内依据变项数目划出圆形<br>3. 依据变项在SPSS内包含的项目划出分支<br>将变量名称输入圆形内 <br>4. 将变量包含之项目拖曳至方框内<br>5. Plugins → Name Unobserved Variables将小圆形赋予名称<br>6. 将各变量（大圆形）两两相连<br>7. Save the current path diagram<br>8. Calculate estimates<br>9. Analysis properties</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="toc_9">2. 记录数据</h3>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>∆X<sup>2</sup></th>
+<th>df</th>
+<th>∆R<sup>2</sup></th>
+<th>RMSEA</th>
+<th>CFI</th>
+<th>TLI</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Baseline (变项独立)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Model1 (合并变项)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Model2 (合并变项)</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>………</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="toc_10">三、验证性因子分析与模型判别的原则</h2>
+
+<p>为了展示怎么画图，上面先讲画图步骤，假设送上来的数据是合格‌‌的，选用了很不错的数据作为例子。<br/>
+但实际情况下，处理结构方程模型之前的，需要先做<strong>验证性因子分析(Confirmatory Factor Analysis, CFA)</strong>。</p>
+
+<h3 id="toc_11">验证性因子分析（CFA）</h3>
+
+<p><img src="https://github.com/vcve/notes_sharing/raw/master/media/15178992944413/ABE718CE-A990-40E8-8D1E-50EC794470F6.jpeg" width="600"></p>
+
+<p>这里有四个因子，然后每个因子就用双箭头两两相连，‌‌再导入数据。‌‌上述所看的数据‌（如x<sup>2</sup>，df等）需要记录下来进行对比。‌‌我们不就是只做这四因子分析，还要做三因子。</p>
+
+<blockquote>
+<p>冯姐：“三因子是什么意思呢？‌‌”</p>
+
+<p>任姐：“四因子的话就四个嘛，三因子的话就是，‌‌把其中两个合在一起，让另外两个保持独立，sef也就是这个这两个合并那个跟这个合并，‌‌然后这个跟这个合并，他们就合并完以后就是做三因子的。‌‌相当于只有一个项变量，然后他把‌‌其中两个合并在一起。”</p>
+</blockquote>
+
+<p>最后面就是两因子、一因子。<br/>
+‌‌根据<strong>三原则</strong>比照下来四因子是最好的。</p>
+
+<h3 id="toc_12">依据三原则找出最佳Model</h3>
+
+<ul>
+<li>绝对原则：CFI, TLI &gt; 0.90且越大越好；RMSEA &lt; 0.08且越小越好</li>
+<li>相对原则：∆R<sup>2</sup>显著与否，显著表示有区别，越显著越好（先看df，差一个df的话，∆R<sup>2</sup>只要3.8就算显著）</li>
+<li>就简原则：完全中介最佳，关联线越少越好</li>
+</ul>
+
+<p><img src="https://github.com/vcve/Manag-Sci./raw/master/Miss_Ren_Amos/IMG_8350.jpg" width="600"><br/>
+验证性因子分析完以后，我要该怎么证明证明我原始模型是最好呢？</p>
+
+<h3 id="toc_13">三原则与模型判别</h3>
+
+<p>同样根据三原则，如下图所示，“模型一”是原始模型，“模型二”就是上面多加一条线，其实也就是不是完全中介了，‌‌“模型三”是下面加一条线，“模型四”是上下两条线‌。<br/>
+<img src="https://github.com/vcve/Manag-Sci./raw/master/Miss_Ren_Amos/IMG_8348%202.jpg" width="600"></p>
+
+<p>做完以后把这些值相比：</p>
+
+<p>首先，数据需要合格（大于0.9），其次‌‌<br/>
+‌‌其次，‌‌‌‌比如“模型二”，与基础模型相比，一个df所对应的△x<sup>2</sup>是-3.456。‌‌在这里，△x平方值越大就是越显著，<br/>
+所以“模型三”是最好的，根据相对标准，“模型三”中的1个df代表了5.455的∆X<sup>2</sup>。<br/>
+最后，如果所有的标准都合格，而△x平方又比照不出来，那就遵循“就简原则”：越少线越好。如“模型一”线最少，那么如果第二条标准下比对不出模型之间的差异，“模型一”就是最好的。</p>
+
+<h2 id="toc_14">Q&amp;A</h2>
+
+<p>冯姐：“如果这个模型中的这些值有点小（不够0.9）怎么办？”<br/>
+任姐：“可以做修正，把‌‌MI值最大的误差项两两相连（详见：结构方程模型：AMOS的操作与应用 — 吴明隆）。”</p>
+
+<h2 id="toc_15">参考</h2>
+
+<ol>
+<li><p><a href="https://www.slideshare.net/beckett53/sem-myth-and-urban-legend-23726980">結構方程式SEM模型配適度的迷思與傳聞-三星統計張偉豪-201307</a></p></li>
+<li><p><a href="http://blog.sina.cn/dpool/blog/s/blog_7fb03f7d01012nsm.html">SEM打包技术(item parceling)</a></p></li>
+</ol>
+
+                        
+                      </div>
+                  </div>
+                </a>
+                <div class="read-more clearfix">
+                  <div class="more-left left">
+                  
+                    <span class="date">2018/2/6</span>
+                    <span>posted in&nbsp;</span> 
+          				  
+          					    <span class="posted-in"><a href='%E8%AE%BA%E6%96%87%E4%B8%8E%E5%AD%A6%E6%9C%AF.html'>论文与学术</a></span>
+          				   
+                  </div>
+                  <div class="more-right right">
+                  <span class="comments">
+                      
+
+                       
+                  </span>
+                  </div>
+                </div>
+              </div><!-- article -->
+        
+              
+
+
+			<div class="row">
+			  <div class="large-6 columns">
+			  <p class="text-left" style="padding-top:25px;">
+			   
+			  </p>
+			  </div>
+			  <div class="large-6 columns">
+			<p class="text-right" style="padding-top:25px;">
+			
+			</p>
+			  </div>
+			</div>
+		</div>
+	</div><!-- large 8 -->
+
+ <div class="large-4 medium-4 columns">
+  <div class="hide-for-small">
+    <div id="sidebar" class="sidebar">
+          <div id="site-info" class="site-info">
+            
+                <div class="site-a-logo"><img src="https://i.imgur.com/16QNJXe.jpg" /></div>
+            
+                <h1>Notes Sharing Site</h1>
+                <div class="site-des"></div>
+                <div class="social">
+<a target="_blank" class="facebook" href="https://www.facebook.com/olivia.y.feng" title="Facebook">Facebook</a>
+
+
+<a target="_blank" class="linkedin" href="https://www.linkedin.com/in/olivfeng/" title="LinkedIn">LinkedIn</a>
+
+
+<a target="_blank" class="instagram" href="instagram.com/kerolivia" title="Instagram">Instagram</a>
+
+
+
+<a target="_blank" class="email" href="mailto:vcve@hotmail.com" title="Email">Email</a>
+  <a target="_blank" class="rss" href="atom.xml" title="RSS">RSS</a>
+                
+              	 </div>
+          	</div>
+
+             
+
+              <div id="site-categories" class="side-item ">
+                <div class="side-header">
+                  <h2>Categories</h2>
+                </div>
+                <div class="side-content">
+
+      	<p class="cat-list">
+        
+            <a href="%E8%AE%BA%E6%96%87%E4%B8%8E%E5%AD%A6%E6%9C%AF.html"><strong>论文与学术</strong></a>
+        
+            <a href="%E6%90%AD%E5%BB%BA%E8%BF%99%E9%87%8C.html"><strong>搭建这里</strong></a>
+         
+        </p>
+
+
+                </div>
+              </div>
+
+              <div id="site-categories" class="side-item">
+                <div class="side-header">
+                  <h2>Recent Posts</h2>
+                </div>
+                <div class="side-content">
+                <ul class="posts-list">
+	      
+		      
+			      <li class="post">
+			        <a href="Use_MWeb.html">以MWeb发布Github pages心得</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="SSCI_Download_tips.html">冯姐SSCI论文查找经验</a>
+			      </li>
+		     
+		  
+		      
+			      <li class="post">
+			        <a href="Miss_Ren_Amos.html">任姐Amos处理法</a>
+			      </li>
+		     
+		   
+		  		</ul>
+                </div>
+              </div>
+        </div><!-- sidebar -->
+      </div><!-- hide for small -->
+</div><!-- large 4 -->
+
+</div><!-- row -->
+
  <div class="page-bottom clearfix">
   <div class="row">
    <p class="copyright">Copyright &copy; 2015
