@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  搭建这里 - Notes Sharing Site
+  确定样本量与功效分析（power analysis） - Notes Sharing Site
   
   </title>
   
@@ -98,98 +98,85 @@
        
 
  <script type="text/javascript">
-	$(function(){
-		$('#menu_item_index').addClass('is_active');
-	});
+  $(function(){
+    $('#menu_item_index').addClass('is_active');
+  });
 </script>
 <div class="row">
-	<div class="large-8 medium-8 columns">
-		<div class="markdown-body home-categories">
-		
-			<div class="article">
-                <a class="clearlink" href="Use_MWeb.html">
-                
-                  <h1>以MWeb发布Github pages心得</h1>
-                  <div class="a-content">
-                      
-                      <div class="a-content-text">
-                        
-                        	<h2 id="toc_0">前言</h2>
+  <div class="large-8 medium-8 columns">
+      <div class="markdown-body article-wrap">
+       <div class="article">
+          
+          <h1>确定样本量与功效分析（power analysis）</h1>
+     
+        <div class="read-more clearfix">
+          <span class="date">2019/10/9</span>
 
-<p>去年我热衷搞虚拟服务器，开设了我的github pages博客，还买了一个域名。但随着热情减退，博客没更新，域名也没续费。最近又想重新开博，发现博客打不开了。<br/>
-对于我而言，github pages设立博客就是一门玄学，永远摸不清其中奥秘。往往跟着网上教程操作一次很正常，改了一些看似无关紧要的参数就马上出现bug。这次也不例外，我想将之前买的域名解绑，重新用回github.io的原始域名，就怎么都打不开。</p>
+          <span>posted in&nbsp;</span> 
+          
+              <span class="posted-in"><a href='%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95.html'>统计方法</a></span>
+           
+         
+          <span class="comments">
+            
 
-<h2 id="toc_1">教程</h2>
+            
+          </span>
 
-<p>一年前的工作流程我已经完全忘记，只好重新找教程。<br/>
-经过试验，还是官方版本的两个文档比较有效：</p>
+        </div>
+      </div><!-- article -->
 
-<blockquote>
-<ol>
-<li><a href="https://zh.mweb.im/sync-webistes-to-github-or-ftp-zh.html">把生成的静态网站发布到github或FTP - MWeb</a></li>
-<li><a href="https://zh.mweb.im/how_to_use_shell_script.html">如何使用“发布脚本”功能发布静态网站 - MWeb</a></li>
-</ol>
-</blockquote>
-
-<p>也就是说，以MWeb是不能自动发布Github Pages的，需要每次“复制脚本命令并打开终端”。<br/>
-在编写本文时，因为格式原因曾希望修改已发布的博客版本，后未果。<br/>
-只好将整个博客删除重新布置。<br/>
-最简便的发步方法还是通过github desktop发布，后期修改都比较容易。教程如下：</p>
+      <div class="article-content">
+      <p>虽然很多营销类期刊都不会深究样本量，但是如《心理学报》这种专业期刊，在投稿时需要提供确定样本量的参考资料。到目前为止，我在问卷调查时确定的样本量都是根据其他同类型研究的样本量来确定的，并未深入了解为什么我需要这么多样本。<br/>
+在假设检验中，统计模型既定的情况下，下面四个参数是有相关关系的：<br/>
+* 显著性水平 α<br/>
+* 样本量 N<br/>
+* 统计效力 Power 即 1-β<br/>
+* 效应量 ES</p>
 
 <blockquote>
-<p><a href="https://zhuanlan.zhihu.com/p/57624916">MWeb + Github pages 搭建个人博客/静态网站 - 知乎</a></p>
+<p>简单来说，如果你的统计功效为50%，那么你做一次实验的话，有50%的可能得到p &lt; 0.05，50%可能得到p &gt; 0.05。所以假如你的实验的统计功效为50%，怎么能够说明审稿人你得到这个结果不是运气？<br/>
+如果你的样本量很小，并且得到了P = 0.001的话，那么你计算出来的效应量是非常大的（inflated）。<br/>
+摘自<a href="https://zhuanlan.zhihu.com/p/30456056">How to Justify Your Sample Size - 知乎</a></p>
 </blockquote>
 
-<p>与上面的教程不同，我直接将生成的静态网站保存在github本地文档中。通过“清理并重新生成网站”+desktop更新的方法就能修改文章。</p>
-
-<p>另外需要注意的是，在desktop布置好后，需要等待几分钟才能在githubpages的网页版体现。</p>
-
-<h2 id="toc_2">后记</h2>
-
-<p>本博客仍比较简陋，虽然有Hexo、Jekyll等更优美的博客工具，但考虑学习时间会很长。本博客以技巧分享为主，未免本末倒置，以后再研究具体方法。</p>
-
-<p>此外，其实设置博客时候如何布置博客模板和其他细节我都不记得了，之后再整理补充。</p>
-
-                        
-                      </div>
-                  </div>
-                </a>
-                <div class="read-more clearfix">
-                  <div class="more-left left">
-                  
-                    <span class="date">2019/9/23</span>
-                    <span>posted in&nbsp;</span> 
-          				  
-          					    <span class="posted-in"><a href='%E6%90%AD%E5%BB%BA%E8%BF%99%E9%87%8C.html'>搭建这里</a></span>
-          				   
-                  </div>
-                  <div class="more-right right">
-                  <span class="comments">
-                      
-
-                       
-                  </span>
-                  </div>
-                </div>
-              </div><!-- article -->
-        
-              
+<p>反正，根据这些那些的原因，在调查前期有必要了解需要回收的样本量。<br/>
+至于功效分析教程推荐<a href="https://stats.idre.ucla.edu/other/gpower/">G*Power</a>。</p>
 
 
-			<div class="row">
-			  <div class="large-6 columns">
-			  <p class="text-left" style="padding-top:25px;">
-			   
-			  </p>
-			  </div>
-			  <div class="large-6 columns">
-			<p class="text-right" style="padding-top:25px;">
-			
-			</p>
-			  </div>
-			</div>
-		</div>
-	</div><!-- large 8 -->
+    
+
+      </div>
+
+      <div class="row">
+        <div class="large-6 columns">
+        <p class="text-left" style="padding:15px 0px;">
+      
+        </p>
+        </div>
+        <div class="large-6 columns">
+      <p class="text-right" style="padding:15px 0px;">
+      
+          <a  href="Use_MWeb.html" 
+          title="Next Post: 以MWeb发布Github pages心得">以MWeb发布Github pages心得 &raquo;</a>
+      
+      </p>
+        </div>
+      </div>
+      <div class="comments-wrap">
+        <div class="share-comments">
+          
+
+          
+
+          
+        </div>
+      </div>
+    </div><!-- article-wrap -->
+  </div><!-- large 8 -->
+
+
+
 
  <div class="large-4 medium-4 columns">
   <div class="hide-for-small">
